@@ -13,7 +13,7 @@
 
         <form id="form-har-csv">
             <div class="mb-3">
-                <label for="file-input-har-csv" class="form-label">Choose a File less than 100Mb</label>
+                <label for="file-input-har-csv" class="form-label">Choose a File less than 30Mb</label>
                 <input class="form-control" type="file" id="file-input-har-csv" accept=".har" required>
             </div>
             <button id="submit-btn-har-csv" type="submit" class="btn btn-primary">Upload and Convert</button>
@@ -35,7 +35,7 @@
             document.getElementById('download-link').style.display = 'none';
             document.getElementById("submit-btn-har-csv").disabled = true;
             if (file) {
-                const maxSizeInBytes = 100 * 1024 * 1024;
+                const maxSizeInBytes = 30 * 1024 * 1024;
 
                 if (file.size > maxSizeInBytes) {
                     alert('File size exceeds 200 MB limit. Please choose a smaller file.');
